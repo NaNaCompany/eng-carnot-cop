@@ -1,0 +1,47 @@
+{
+  "id": "E016",
+  "title": "카르노 냉동기 COP 계산기",
+  "inputs_text": "저온 열원 T_c [K], 고온 열원 T_h [K]",
+  "formula": "COP_R,C = T_c / (T_h − T_c)",
+  "output_text": "가역 냉동기 성능계수 COP_R,C [무차원]",
+  "assumptions": "T_h>T_c>0 K. 냉동기의 제거열/일 비율이며 난방용 열펌프 COP와 구분한다. 1 초과가 가능하며 실제 COP 예측이 아니다. 가역 열량비와 냉동 COP 정의를 결합한다.",
+  "purpose": "냉동 카르노 COP 계산 / 냉동공조 이론 검산",
+  "sources": [
+    {
+      "label": "OpenStax · The Carnot Cycle",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/4-5-the-carnot-cycle"
+    },
+    {
+      "label": "OpenStax · Refrigerators and Heat Pumps",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/4-3-refrigerators-and-heat-pumps"
+    }
+  ],
+  "slug": "eng-carnot-cop",
+  "category": "열",
+  "result_label": "카르노 냉동기 COP",
+  "result_dimension": "ratio",
+  "fields": [
+    {
+      "key": "tc",
+      "label": "저온 열원 절대온도 T_c",
+      "dimension": "temperature",
+      "example": 270,
+      "constraint": "positive",
+      "display_unit": "K",
+      "display_value": "270"
+    },
+    {
+      "key": "th",
+      "label": "고온 열원 절대온도 T_h",
+      "dimension": "temperature",
+      "example": 300,
+      "constraint": "positive",
+      "display_unit": "K",
+      "display_value": "300"
+    }
+  ],
+  "site": "https://nanalab.kr/eng-carnot-cop/",
+  "repository": "https://github.com/NaNaCompany/eng-carnot-cop",
+  "condition": "",
+  "output_unit": "1"
+}
